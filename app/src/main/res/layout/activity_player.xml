@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2"
+    tools:context=".PlayerActivity"
     android:orientation="vertical"
     android:gravity="center">
 
@@ -73,23 +73,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:icon="@drawable/previous_icon"
-            app:iconSize="40dp"/>
+            app:iconSize="40dp"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:backgroundTint="@android:color/holo_red_light"
             app:icon="@drawable/pause_icon"
             app:iconSize="50dp"
-            android:layout_marginHorizontal="25dp"
+            app:iconTint="@color/white"
             app:shapeAppearanceOverlay="@style/curved"
-            android:backgroundTint="@android:color/holo_red_light"
-            app:iconTint="@color/white"/>
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:icon="@drawable/next_icon"
-            app:iconSize="40dp"/>
+            app:iconSize="40dp"
+            tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
 
     <LinearLayout
@@ -110,8 +113,7 @@
         <androidx.appcompat.widget.AppCompatSeekBar
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            tools:ignore="NestedWeights" />
+            android:layout_weight="1" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -131,38 +133,42 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@android:color/transparent"
             android:contentDescription="@string/repeat_button"
+            android:minHeight="48dp"
             android:src="@drawable/repeat_icon"
-            app:tint="@color/cool_pink"
-            android:layout_weight="1"/>
+            app:tint="@color/cool_pink" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@android:color/transparent"
             android:contentDescription="@string/equalizer_button"
+            android:minHeight="48dp"
             android:src="@drawable/equalizer_icon"
-            app:tint="@color/cool_pink"
-            android:layout_weight="1"/>
+            app:tint="@color/cool_pink" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@android:color/transparent"
             android:contentDescription="@string/timer_button"
+            android:minHeight="48dp"
             android:src="@drawable/timer_icon"
-            app:tint="@color/cool_pink"
-            android:layout_weight="1"/>
+            app:tint="@color/cool_pink" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@android:color/transparent"
             android:contentDescription="@string/share_button"
+            android:minHeight="48dp"
             android:src="@drawable/share_icon"
-            app:tint="@color/cool_pink"
-            android:layout_weight="1"/>
+            app:tint="@color/cool_pink" />
 
 
     </LinearLayout>
