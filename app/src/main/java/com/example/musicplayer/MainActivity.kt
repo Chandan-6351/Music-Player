@@ -10,6 +10,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.app.ActivityCompat
 import com.example.musicplayer.databinding.ActivityMainBinding
 import kotlin.math.log
+import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestRuntimePermission()
-        setTheme(R.style.Theme_MusicPlayer)
+        setTheme(R.style.coolPinkNav)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -40,6 +41,16 @@ class MainActivity : AppCompatActivity() {
         binding.playlistBtn.setOnClickListener {
             val intent = Intent(this@MainActivity, PlaylistActivity::class.java)
             startActivity(intent)
+        }
+        binding.navView.setNavigationItemSelectedListener{
+            when(it.itemId)
+            {
+                R.id.navFeedback -> Toast.makeText(baseContext, "Feedback", Toast.LENGTH_SHORT).show()
+                R.id.navSetting -> Toast.makeText(baseContext, "Setting", Toast.LENGTH_SHORT).show()
+                R.id.navAbout -> Toast.makeText(baseContext, "About", Toast.LENGTH_SHORT).show()
+                R.id.navExit -> exitProcess(1)
+            }
+            true
         }
     }
     //for permission
